@@ -583,6 +583,18 @@ video {
   bottom: 0.25rem;
 }
 
+.bottom-2{
+  bottom: 0.5rem;
+}
+
+.bottom-0{
+  bottom: 0px;
+}
+
+.bottom-1\.5{
+  bottom: 0.375rem;
+}
+
 .ml-1{
   margin-left: 0.25rem;
 }
