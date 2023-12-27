@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Notification() {
+export default function Notification(props) {
   return (
-    <div className="card flex rounded-md gap-2 p-3 bg-blue-300 bg-opacity-10">
+    <div className="card flex rounded-md gap-2 p-3 mb-3 bg-blue-300 bg-opacity-10">
       <img
         className="w-8 h-8"
-        src="./images/avatar-mark-webber.webp"
+        src={`./images/avatar-${props.avatar}.webp`}
         alt="avatar"
       />
       <div className="flex flex-col">

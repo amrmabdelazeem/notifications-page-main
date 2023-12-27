@@ -14,7 +14,8 @@ export default function App() {
         <button className=" text-gray-400 text-xs">Mark all as read</button>
       </div>
       <div className="notifications pt-5">
-      <Notification />
+      <Notification avatar="mark-webber" />
+      <Notification avatar="angela-gray" />
       </div>
     </div>
   );
