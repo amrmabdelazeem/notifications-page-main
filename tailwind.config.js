@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       colors:{
-        primary:"hsl(1, 90%, 64%)"
+        primary:"hsl(1, 90%, 64%)",
+        secondary: "hsl(219, 85%, 26%)"
       },
       fontFamily:{
         jakarta :"Plus Jakarta Sans"
