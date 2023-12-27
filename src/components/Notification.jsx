@@ -39,6 +39,9 @@ export default function Notification(props) {
           </p>
         </div>
       </div>
+      <div className={`picture ${props.picture ? "" : "hidden"}  w-16  flex justify-end`}>
+            <img className="w-7 h-7" src="./images/image-chess.webp" alt="chess" />
+        </div>
     </div>
   );
 }
