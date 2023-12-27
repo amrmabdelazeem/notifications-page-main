@@ -14,8 +14,9 @@ export default function App() {
         <button className=" text-gray-400 text-xs">Mark all as read</button>
       </div>
       <div className="notifications pt-5">
-      <Notification avatar="mark-webber" />
-      <Notification avatar="angela-gray" />
+      <Notification avatar="mark-webber" userName="Mark Webber" action="react to your recent post" achievement="My first tournament today!" timestamp="1m ago"/>
+      <Notification avatar="angela-gray" userName="Angela Gray" action="followed you" achievement="" timestamp="5m ago"/>
+      <Notification avatar="jacob-thompson" userName="Jacob Thompson" action="has joined your group" achievement="Chess Club" timestamp="1 day ago"/>
       </div>
     </div>
   );

@@ -10,14 +10,14 @@ export default function Notification(props) {
       />
       <div className="flex flex-col">
         <span className=" relative text-sm text-gray-400">
-          <span className="text-black font-bold mr-1 ">Mark Webber</span>{" "}
-          <span className="">reacted to your recent post</span>{" "}
-          <span className=" font-semibold text-gray-500 ml-1">
-            My first tournament today!
+          <span className="text-black font-bold mr-1 ">{props.userName}</span>{" "}
+          <span className="">{props.action}</span>{" "}
+          <span className={`font-semibold ml-1 ${props.achievement === 'Chess Club' ? "text-secondary" : "text-gray-500"}`}>
+            {props.achievement} 
           </span>
           <div className="ml-2 inline absolute bottom-1.5 rounded w-2 h-2 bg-primary"></div>
         </span>
-        <p className="text-xs  mt-1 text-gray-400">1m ago</p>
+        <p className="text-xs  mt-1 text-gray-400">{props.timestamp}</p>
       </div>
     </div>
   );

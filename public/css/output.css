@@ -756,3 +756,8 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
+.text-secondary{
+  --tw-text-opacity: 1;
+  color: hsl(219 85% 26% / var(--tw-text-opacity));
+}
