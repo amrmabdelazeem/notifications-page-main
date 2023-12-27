@@ -19,6 +19,8 @@ export default function App() {
       <Notification avatar="jacob-thompson" userName="Jacob Thompson" action="has joined your group" achievement="Chess Club" timestamp="1 day ago" read={true}/>
       <Notification avatar="rizky-hasanuddin" userName="Rizky Hasanuddin" action="sent you a private message" achievement="" timestamp="5 days ago" privateMsg = {true} read={false}/>
       <Notification avatar="kimberly-smith" userName="Kimberly Smith" action="commented on your picture" achievement="" timestamp="1 week ago" read={false} picture={true}/>
+      <Notification avatar="nathan-peterson" userName="Nathan Peterson" action="reacted to your recent post" achievement="5 end-game strategies to increase your win rate" timestamp="2 weeks ago" read={false}/>
+      <Notification avatar="anna-kim" userName="Anna Kim" action="left the group" achievement="Chess Club" timestamp="2 weeks ago" read={false}/>
       </div>
     </div>
   );
