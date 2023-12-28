@@ -2,12 +2,33 @@ import React, { useState } from "react";
 import Notification from "./Notification.jsx";
 
 export default function App() {
-const [isRead, setIsRead] = useState(true)
+const [isRead, setIsRead] = useState({first: true, second: true, thrid: true})
 const [notifications, setNotifications] = useState(3);
+
 
 const markAllRead = () =>{
   setIsRead(!isRead);
   setNotifications(0)
+}
+
+const decreaseNotification = (state) => {
+  if(state && notifications> 0){
+    setNotifications(notifications-1);
+  }
+}
+
+const MarkAsRead = (id, state) =>{
+  if(Object.values(isRead)[id-1]){
+    setIsRead((prevState)=>{
+      return {...prevState, [Object.keys(isRead)[id-1]]: !state};
+    })
+  }
+}
+
+
+function handleClick(id, state){
+  decreaseNotification(state);
+  MarkAsRead(id, state);
 }
 
   return (
@@ -24,36 +45,37 @@ const markAllRead = () =>{
       <div className="notifications pt-5">
         <Notification
           id={1}
+          onChild= {handleClick}
           avatar="mark-webber"
           userName="Mark Webber"
           action="react to your recent post"
           achievement="My first tournament today!"
           timestamp="1m ago"
-          read={isRead}
+          read={isRead.first}
         />
         <Notification
           id={2}
-          // onclicked={(isRead)=> handleCardClicks(2, isRead)}
+          onChild= {handleClick}
           avatar="angela-gray"
           userName="Angela Gray"
           action="followed you"
           achievement=""
           timestamp="5m ago"
-          read={isRead}
+          read={isRead.second}
         />
         <Notification
           id={3}
-          // onclicked={(isRead)=> handleCardClicks(3, isRead)}
+          onChild= {handleClick}
           avatar="jacob-thompson"
           userName="Jacob Thompson"
           action="has joined your group"
           achievement="Chess Club"
           timestamp="1 day ago"
-          read={isRead}
+          read={isRead.thrid}
         />
         <Notification
           id={4}
-          // onclicked={(isRead)=> handleCardClicks(4, isRead)}
+          onChild= {handleClick}
           avatar="rizky-hasanuddin"
           userName="Rizky Hasanuddin"
           action="sent you a private message"
@@ -64,7 +86,7 @@ const markAllRead = () =>{
         />
         <Notification
           id={5}
-          // onclicked={(isRead)=> handleCardClicks(5, isRead)}
+          onChild= {handleClick}
           avatar="kimberly-smith"
           userName="Kimberly Smith"
           action="commented on your picture"
@@ -75,7 +97,7 @@ const markAllRead = () =>{
         />
         <Notification
           id={6}
-          // onclicked={(isRead)=> handleCardClicks(6, isRead)}
+          onChild= {handleClick}
           avatar="nathan-peterson"
           userName="Nathan Peterson"
           action="reacted to your recent post"
@@ -85,7 +107,7 @@ const markAllRead = () =>{
         />
         <Notification
           id={7}
-          // onclicked={(isRead)=> handleCardClicks(7, isRead)}
+          onChild= {handleClick}
           avatar="anna-kim"
           userName="Anna Kim"
           action="left the group"

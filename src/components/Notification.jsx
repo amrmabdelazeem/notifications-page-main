@@ -4,6 +4,11 @@ export default function Notification(props) {
   
   return (
     <div
+    onClick={()=>{
+    let targetId = props.id;
+    let targetState = props.read;
+    props.onChild(targetId, targetState)
+    }}
       className={`card flex rounded-md gap-2 p-3 mb-2 bg-opacity-10 cursor-pointer ${
         props.read ? "bg-blue-300" : "bg-transparent"
       }`}
