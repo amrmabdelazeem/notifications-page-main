@@ -11,11 +11,11 @@ const markAllRead = () =>{
 }
 
   return (
-    <div className="container py-5 px-4 font-jakarta">
+    <div className="container rounded-lg p-8 pb-0 font-jakarta lg:w-7/12 xl:w-52% bg-white lg:m-10">
       <div className="header flex justify-between">
         <h1 className=" text-black font-jakarta800 text-base">
           Notifications
-          <span className=" text-white bg-secondary py-0 px-2 rounded-md">
+          <span className=" text-white bg-secondary py-1 px-3 rounded-md ml-2">
             {notifications}
           </span>
         </h1>

@@ -36,7 +36,7 @@ export default function Notification(props) {
         <div
           className={`${
             props.privateMsg ? "block" : "hidden"
-          } text-gray-500 border-2 rounded-md text-xs py-4 px-6 mt-3`}
+          } text-gray-500 border rounded-md text-xs p-3 pr-5 mt-3 lg:text-sm`}
         >
           <p>
             Hello, thanks for setting up the Chess Club. I've been a member for
