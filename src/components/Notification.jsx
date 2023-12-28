@@ -9,7 +9,7 @@ export default function Notification(props) {
         let targetState = props.read;
         props.onChild(targetId, targetState)
       }}
-      className={`card flex rounded-md gap-2 p-3 mb-2 bg-opacity-10 ${props.read ? "bg-blue-300" : "bg-transparent"
+      className={`card flex rounded-md gap-2 p-3 mb-2 bg-opacity-10 cursor-pointer ${props.read ? "bg-blue-300" : "bg-transparent"
         }`}
     >
       <img
@@ -31,7 +31,7 @@ export default function Notification(props) {
           </span>
           <div
             className={`ml-2 inline absolute bottom-1.5 rounded w-2 h-2 ${props.read ? "bg-primary" : "bg-transparent"
-              }`}
+              } animate-pulse`}
           ></div>
         </span>
         <p className="text-xs  mt-1 text-gray-400">{props.timestamp}</p>

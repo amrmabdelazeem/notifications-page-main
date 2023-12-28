@@ -40,7 +40,7 @@ function handleClick(id, state){
             {notifications}
           </span>
         </h1>
-        <button onClick={markAllRead} className=" text-gray-400 text-xs cursor-pointer hover:text-secondary">Mark all as read</button>
+        <button onClick={markAllRead} className=" text-gray-400 text-xs cursor-pointer hover:text-secondary transition duration-300 ease-in-out">Mark all as read</button>
       </div>
       <div className="notifications pt-5">
         <Notification
