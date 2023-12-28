@@ -18,13 +18,13 @@ export default function Notification(props) {
         alt="avatar"
       />
       <div className="flex flex-col">
-        <span className=" relative text-sm text-gray-400">
+        <span className=" relative text-sm text-gray-500">
           <span className="text-black font-bold mr-1 ">{props.userName}</span>{" "}
           <span className="">{props.action}</span>{" "}
           <span
             className={`font-semibold ml-1 ${props.achievement === "Chess Club"
                 ? "text-secondary"
-                : "text-gray-500"
+                : "text-gray-600"
               }`}
           >
             {props.achievement}
@@ -48,9 +48,9 @@ export default function Notification(props) {
       </div>
       <div
         className={`picture ${props.picture ? "" : "hidden"
-          }  w-16  flex justify-end`}
+          }  grow flex justify-end w-10`}
       >
-        <img className="w-7 h-7" src="./images/image-chess.webp" alt="chess" />
+        <img className="w-8 h-8" src="./images/image-chess.webp" alt="chess" />
       </div>
     </div>
   );
