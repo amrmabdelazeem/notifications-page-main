@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{js,jsx,ts,tsx}","./public/**/*.{js,jsx,ts,tsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}","./public/**/*.{js,jsx,ts,tsx,html}"],
   theme: {
     extend: {
       colors:{
@@ -14,6 +14,9 @@ export default {
       fontWeight:{
         jakarta500:"500",
         jakarta800: "800"
+      },
+      width: {
+        '52%':'52%'
       }
     },
   },
