@@ -82,7 +82,6 @@ function handleClick(id, state){
           achievement=""
           timestamp="5 days ago"
           privateMsg={true}
-          // read={false}
         />
         <Notification
           id={5}
@@ -92,7 +91,6 @@ function handleClick(id, state){
           action="commented on your picture"
           achievement=""
           timestamp="1 week ago"
-          // read={false}
           picture={true}
         />
         <Notification
@@ -103,7 +101,6 @@ function handleClick(id, state){
           action="reacted to your recent post"
           achievement="5 end-game strategies to increase your win rate"
           timestamp="2 weeks ago"
-          // read={false}
         />
         <Notification
           id={7}
@@ -113,7 +110,6 @@ function handleClick(id, state){
           action="left the group"
           achievement="Chess Club"
           timestamp="2 weeks ago"
-          // read={false}
         />
       </div>
     </div>

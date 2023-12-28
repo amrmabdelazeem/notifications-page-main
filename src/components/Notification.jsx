@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function Notification(props) {
-  
+
   return (
     <div
-    onClick={()=>{
-    let targetId = props.id;
-    let targetState = props.read;
-    props.onChild(targetId, targetState)
-    }}
-      className={`card flex rounded-md gap-2 p-3 mb-2 bg-opacity-10 cursor-pointer ${
-        props.read ? "bg-blue-300" : "bg-transparent"
-      }`}
+      onClick={() => {
+        let targetId = props.id;
+        let targetState = props.read;
+        props.onChild(targetId, targetState)
+      }}
+      className={`card flex rounded-md gap-2 p-3 mb-2 bg-opacity-10 cursor-pointer ${props.read ? "bg-blue-300" : "bg-transparent"
+        }`}
     >
       <img
         className="w-8 h-8"
@@ -23,25 +22,22 @@ export default function Notification(props) {
           <span className="text-black font-bold mr-1 ">{props.userName}</span>{" "}
           <span className="">{props.action}</span>{" "}
           <span
-            className={`font-semibold ml-1 ${
-              props.achievement === "Chess Club"
+            className={`font-semibold ml-1 ${props.achievement === "Chess Club"
                 ? "text-secondary"
                 : "text-gray-500"
-            }`}
+              }`}
           >
             {props.achievement}
           </span>
           <div
-            className={`ml-2 inline absolute bottom-1.5 rounded w-2 h-2 ${
-              props.read ? "bg-primary" : "bg-transparent"
-            }`}
+            className={`ml-2 inline absolute bottom-1.5 rounded w-2 h-2 ${props.read ? "bg-primary" : "bg-transparent"
+              }`}
           ></div>
         </span>
         <p className="text-xs  mt-1 text-gray-400">{props.timestamp}</p>
         <div
-          className={`${
-            props.privateMsg ? "block" : "hidden"
-          } text-gray-500 border rounded-md text-xs p-3 pr-5 mt-3 lg:text-sm`}
+          className={`${props.privateMsg ? "block" : "hidden"
+            } text-gray-500 border rounded-md text-xs p-3 pr-5 mt-3 lg:text-sm`}
         >
           <p>
             Hello, thanks for setting up the Chess Club. I've been a member for
@@ -51,9 +47,8 @@ export default function Notification(props) {
         </div>
       </div>
       <div
-        className={`picture ${
-          props.picture ? "" : "hidden"
-        }  w-16  flex justify-end`}
+        className={`picture ${props.picture ? "" : "hidden"
+          }  w-16  flex justify-end`}
       >
         <img className="w-7 h-7" src="./images/image-chess.webp" alt="chess" />
       </div>
